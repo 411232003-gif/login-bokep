@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #0f172a;
+    overflow: hidden;
+}
+
+/* WADAH UTAMA PERSPEKTIF 3D */
+.container {
+    perspective: 1000px;
+    /* Jarak mata ke objek 3D */
+}
+
+/* KARTU LOGIN UTAMA */
+.card {
+    width: 320px;
+    padding: 40px 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #fff;
+    transform-style: preserve-3d;
+    /* Jaga kedalaman elemen anak */
+    transition: transform 0.1s ease-out;
+}
+
+.card h2 {
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    transform: translateZ(30px);
+    /* Melayang 30px ke depan */
+}
+
+.input-group {
+    margin-bottom: 20px;
+    transform: translateZ(20px);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    color: #fff;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background: #38bdf8;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    color: #0f172a;
+    font-weight: bold;
+    cursor: pointer;
+    transform: translateZ(20px);
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #0ea5e9;
+}
